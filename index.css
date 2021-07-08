@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poiret+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+#btnOn{
+    width: 2em;
+    height: 2em;
+    appearance: none;
+    background-color: white;
+    border-radius: 2em;
+    animation: brillarAnimation 0.5s linear infinite alternate;
+}
+
+#btnOn:checked ~ .txtLight {
+    color: white;
+    display: block;
+}
+
+#btnOn:checked ~ .txtBrillar {
+    color: black;
+    text-shadow:    0 0 5px rgb(255, 255, 255),     
+                    0 0 10px rgb(255, 255, 255),     
+                    0 0 15px rgb(255, 255, 255),  
+                    0 0 20px rgb(255, 255, 255),     
+                    0 0 25px rgb(255, 255, 255),      
+                    0 0 30px rgb(255, 255, 255),     
+                    0 0 35px rgb(255, 255, 255),        
+                    0 0 40px rgb(255, 255, 255);
+}
+
+#btnOn:checked{
+    display: none;
+}
+
+#container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+p{
+    text-align: center;
+    display: none;
+}
+
+.txtBrillar{   
+    margin: 10px 0px;
+    font-size: 12em;  
+    font-family: 'Parisienne', cursive;  
+}
+
+.txtOtro{
+    font-size: 2em;   
+    font-family: 'Poiret One', cursive;
+}
+
+@keyframes brillarAnimation {
+    from{
+        box-shadow:    0 0 5px rgb(255, 255, 255), 
+    }
+    to{
+        box-shadow: 0 0 5px rgb(255, 255, 255),     
+                    0 0 10px rgb(255, 255, 255),       
+                    0 0 15px rgb(255, 255, 255),
+                    0 0 20px rgb(255, 255, 255),   
+                    0 0 25px rgb(255, 255, 255),     
+                    0 0 30px rgb(255, 255, 255),  
+                    0 0 35px rgb(255, 255, 255),        
+                    0 0 40px rgb(255, 255, 255);
+    }
+}
